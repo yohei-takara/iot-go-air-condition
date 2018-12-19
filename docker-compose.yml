@@ -1,0 +1,7 @@
+version: '3'
+services:
+  fluentd:
+    build: .docker/.
+    image: go-sensor:1.0
+    container_name: go-sensor
+    command: "tail -f /dev/null"
