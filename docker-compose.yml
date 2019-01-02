@@ -1,7 +1,9 @@
 version: '3'
 services:
-  fluentd:
+  iot-container:
     build: .docker/.
     image: go-sensor:1.0
     container_name: go-sensor
     command: "tail -f /dev/null"
+    volumes:
+      - ./go/src:/usr/src
